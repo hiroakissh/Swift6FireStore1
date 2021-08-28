@@ -1,19 +1,36 @@
-//
-//  ViewController.swift
-//  Swift6FireStore1
-//
-//  Created by HiroakiSaito on 2021/08/27.
-//
 
 import UIKit
+import FirebaseAuth
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController{
+    
+   
+    @IBOutlet weak var textFiled: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        viewWillAppear(animated)
+        
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    
+    func login(){
+        
+        
+    }
+    
+    
+    @IBAction func done(_ sender: Any) {
+        
+        
+        
+    }
 }
+
 

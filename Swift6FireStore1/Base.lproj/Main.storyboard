@@ -38,6 +38,9 @@
                                 <state key="normal" title="決定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="done:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ccn-ny-m7O"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -45,6 +48,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="cZb-uJ-P1n"/>
                     <connections>
+                        <outlet property="textFiled" destination="woj-uR-6vQ" id="99b-yX-8fn"/>
+                        <outlet property="てxtField" destination="woj-uR-6vQ" id="t4V-uU-7sD"/>
                         <segue destination="IFA-qp-EeT" kind="show" id="wbc-NM-sxF"/>
                     </connections>
                 </viewController>
@@ -55,7 +60,7 @@
         <!--View Controller-->
         <scene sceneID="bdB-Dp-Jcl">
             <objects>
-                <viewController id="IFA-qp-EeT" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="IFA-qp-EeT" customClass="ViewController" customModule="Swift6FireStore1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RHw-xJ-WYO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,13 +78,16 @@
                                 <rect key="frame" x="243" y="683" width="126" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="send:" destination="IFA-qp-EeT" eventType="touchUpInside" id="JZC-S4-IkT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2e-lc-bHG">
                                 <rect key="frame" x="51" y="687" width="128" height="124"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="box"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vo6-u8-I8T">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vo6-u8-I8T">
                                 <rect key="frame" x="51" y="183" width="313" height="232"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.1749192178" green="0.64279562229999998" blue="0.95971220729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,7 +104,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9UH-ZT-76e">
-                                <rect key="frame" x="48" y="453" width="326" height="207"/>
+                                <rect key="frame" x="44" y="453" width="326" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -109,6 +117,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="lRo-2X-eHI"/>
                     <connections>
+                        <outlet property="odaiLabel" destination="Vo6-u8-I8T" id="R8X-Zg-mt9"/>
+                        <outlet property="textView" destination="9UH-ZT-76e" id="3nP-JB-PEo"/>
                         <segue destination="vL0-jI-XLj" kind="show" id="49N-zi-w3Q"/>
                     </connections>
                 </viewController>
